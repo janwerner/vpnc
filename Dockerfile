@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-RUN apt update -y && apt install -y vpnc
+RUN apt-get update -y && apt-get install -y vpnc iptables
 
 
 # Enable NAT, firewall rules
