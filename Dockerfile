@@ -4,6 +4,8 @@ RUN apt update -y && apt install -y vpnc
 
 CMD ["/etc/service/vpnc/run"]
 
+# Enable NAT, firewall rules
+
 RUN sysctl net.ipv4.ip_forward
 
 RUN iptables -t nat -A POSTROUTING -o tun0 -j MASQUERADE
