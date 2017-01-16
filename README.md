@@ -5,6 +5,7 @@ Cisco vpn client
 
 - `VPNC_GATEWAY`: IP/name of your IPSec gateway
 - `VPNC_ID`: Group name
+- `VPNC_AUTHMODE`: IKE authentication mode (hybrid, psk)
 - `VPNC_SECRET`: Group password
 - `VPNC_USERNAME`: XAUTH username
 - `VPNC_PASSWORD`: XAUTH password
