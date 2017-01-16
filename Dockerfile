@@ -9,8 +9,8 @@ CMD ["/etc/service/vpnc/run"]
 RUN sysctl net.ipv4.ip_forward
 
 RUN iptables -t nat -A POSTROUTING -o tun0 -j MASQUERADE
-RUN iptables -A FORWARD -i ens192 -o tun0 -j ACCEPT
-RUN iptables -A FORWARD -i ens192 -o tun0 -m state --state RELATED,ESTABLISHED -j ACCEPT
+RUN iptables -A FORWARD -i eth0 -o tun0 -j ACCEPT
+RUN iptables -A FORWARD -i eth0 -o tun0 -m state --state RELATED,ESTABLISHED -j ACCEPT
 
 # Setup vpnc service
 RUN mkdir -p /etc/service/vpnc
