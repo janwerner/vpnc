@@ -2,7 +2,6 @@ FROM ubuntu:16.04
 
 RUN apt update -y && apt install -y vpnc
 
-CMD ["/etc/service/vpnc/run"]
 
 # Enable NAT, firewall rules
 
@@ -15,6 +14,8 @@ RUN iptables -A FORWARD -i eth0 -o tun0 -m state --state RELATED,ESTABLISHED -j 
 # Setup vpnc service
 RUN mkdir -p /etc/service/vpnc
 COPY bin/vpnc.sh /etc/service/vpnc/run
+
+CMD ["/etc/service/vpnc/run"]
 
 # Clean up
 RUN apt-get autoremove -y \
