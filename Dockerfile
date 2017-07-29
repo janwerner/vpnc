@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update -y && apt-get install -y vpnc iptables iptables-persistent net-tools iputils-ping iputils-tracepath
+RUN apt-get update -y && apt-get install -y vpnc iptables  net-tools iputils-ping iputils-tracepath
 
 # Clean up
 RUN apt-get autoremove -y \

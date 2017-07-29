@@ -1,5 +1,9 @@
 # vpnc
-Cisco vpn client
+
+- Ubuntu 16.04 base image
+- Cisco-compatible VPN client
+- net.ipv4.ip_forward
+- iptables w/ rules for masquerading
 
 ## Environment Variables
 
