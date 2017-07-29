@@ -1,0 +1,17 @@
+version: '2'
+services:
+  app:
+    image: janwer/vpnc-relay
+    restart: always
+    env_file:
+     - vpnc-credentials.env
+    cap_add:
+     - NET_ADMIN
+    networks:
+      public:
+        ipv4_address: 10.0.7.193
+    privileged: yes
+
+networks:
+   public:
+    external: true
