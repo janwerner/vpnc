@@ -41,7 +41,6 @@ services:
     networks:
       public:
         ipv4_address: 192.168.1.2
-    privileged: yes
 
 networks:
    public:
